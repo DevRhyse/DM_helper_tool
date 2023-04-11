@@ -7,7 +7,7 @@ export function Encounters () {
             return (
                 <div>
                     <span>{`Creature: ${ele.creature}`}</span>
-                    <span>{`Setting: ${ele.setting}`}</span>
+                    <span>{`Completed: ${ele.completed}`}</span>
                     <span>{`Challenge Rating: ${ele.challengeRating}`}</span>
                 </div>
             )

@@ -21,11 +21,11 @@ export function MainContent () {
                             />
 
                         <label
-                            htmlFor="setting">
-                            Setting
+                            htmlFor="completed">
+                            Completed
                         </label>
                         <input
-                            name="setting"
+                            name="completed"
                             type="text"
                             />
                         <label

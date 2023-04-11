@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
 // const MongoStore = require("connect-mongo")
-const logger = require("morgan");
+// const logger = require("morgan");
 const connectDB = require("./config/database");
 const homeRoutes = require("./routes/main");
 const encounterRoutes = require("./routes/encounterRoutes");
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Logging
-app.use(logger("dev"));
+// app.use(logger("dev"));
 
 //Connect To Database
 connectDB().then(conn => {
