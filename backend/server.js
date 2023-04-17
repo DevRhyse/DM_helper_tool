@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
-// const MongoStore = require("connect-mongo")
+const MongoStore = require("connect-mongo")
 // const logger = require("morgan");
 const connectDB = require("./config/database");
 const homeRoutes = require("./routes/main");
@@ -31,14 +31,14 @@ app.use(express.json());
 //Connect To Database
 connectDB().then(conn => {
   // Setup Sessions - stored in MongoDB
-  // app.use(
-  //   session({
-  //     secret: "keyboard cat",
-  //     resave: false,
-  //     saveUninitialized: false,
-  //     store: MongoStore.create({ client: mongoose.connection.getClient() }),
-  //   })
-  // );
+  app.use(
+    session({
+      secret: "keyboard cat",
+      resave: false,
+      saveUninitialized: false,
+      store: MongoStore.create({ client: mongoose.connection.getClient() }),
+    })
+  );
 
   // Passport middleware
   app.use(passport.initialize());

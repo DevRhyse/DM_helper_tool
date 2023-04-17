@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 
 const EncounterSchema = new mongoose.Schema({
-  Creature: {
+  creature: {
     type: String,
     required: true,
   },
-  completed: {
-    type: Boolean,
-    required: true,
-  },
-  ChallengeRating: {
+  challengeRating: {
     type: Number,
     required: true
-  }
+  },
+  completed: {
+    type: String,
+    required: true,
+  },
 })
 
 module.exports = mongoose.model('Encounter', EncounterSchema)

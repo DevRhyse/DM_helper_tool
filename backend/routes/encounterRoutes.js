@@ -3,7 +3,7 @@ const router = express.Router()
 const encounterController = require('../controllers/encounterController') 
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
-router.get('/encounters', ensureAuth, encounterController.getEncounter)
+router.get('/encounters', encounterController.getEncounter)
 
 router.post('/createEncounter', encounterController.createEncounter)
 
